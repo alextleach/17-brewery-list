@@ -1,6 +1,8 @@
 
+$gutter: 1rem;
+
 body {
-  background: #181818;
+  background: #121212;
   margin: 0;
 }
 
@@ -12,4 +14,41 @@ body {
 .width-container {
   max-width: 60rem;
   margin: 0 auto;
+}
+
+.nav-bar {
+  background: #b7e1e4;
+
+  &__content {
+    padding: $gutter;
+  }
+  h2{
+    margin: 0;
+  }
+}
+
+.grid {
+  padding: $gutter*2 $gutter;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+
+  &__item{
+    background: #fff;
+    padding: $gutter/2;
+    width: calc(100% / 3 - 1rem);
+    display: flex;
+
+    &__frame {
+      width: 35%;
+      img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+      width: 65%;
+      padding-left: $gutter;
+    }
+  }
 }
