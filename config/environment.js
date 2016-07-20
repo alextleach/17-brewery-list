@@ -1,8 +1,10 @@
 /* jshint node: true */
+require('dotenv').config()
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'brewery-list',
+    apiKey: process.env.API_KEY,
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

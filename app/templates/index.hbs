@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Oxygen:300" rel="stylesheet">
+{{log model}}
 <div class="everything">
   <div class="nav-bar">
     <div class="width-container">
@@ -9,15 +11,17 @@
   <main>
     <div class="width-container">
     <div class="grid">
+      {{#each model.data as |brew|}}
       <div class="grid__item">
         <div class="grid__item__frame">
-          <img src="http://placecera.com/150/150" alt="">
+          <img src="{{brew.images.squareMedium}}" alt="">
         </div>
         <span class="grid__item__info">
-          <h3>14er</h3>
-          <p>EST. 2015</p>
+          <h3>{{brew.name}}</h3>
+          <p>EST. {{brew.established}}</p>
         </span>
       </div>
+      {{/each}}
     </div>
   </div>
   </main>
