@@ -37,6 +37,7 @@ body {
 .grid {
   padding: $gutter*2 $gutter;
   display: flex;
+  margin: 0 -$gutter;
   flex-wrap: wrap;
   align-content: center;
 
