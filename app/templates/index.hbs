@@ -1,0 +1,29 @@
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Oxygen:300" rel="stylesheet">
+{{log model}}
+<div class="everything">
+  <div class="nav-bar">
+    <div class="width-container">
+      <div class="nav-bar__content">
+        <h2>New Breweries</h2>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="width-container">
+    <div class="grid">
+      {{#each model.data as |brew|}}
+      <div class="grid__item">
+        <div class="grid__item__frame">
+          <img src="{{brew.images.squareMedium}}" alt="">
+        </div>
+        <span class="grid__item__info">
+          <h3>{{brew.name}}</h3>
+          <p>EST. {{brew.established}}</p>
+        </span>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  </main>
+</div>
+{{outlet}}
